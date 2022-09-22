@@ -1,9 +1,9 @@
 body {
   margin: 0px;
+  font-family: "Roboto", sans-serif;
 }
 
 .nav-bar-link {
-  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -23,7 +23,6 @@ body {
   bottom: 10%;
   width: 160px;
   left: -25px;
-  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -34,7 +33,6 @@ body {
 }
 
 .user-header h1 {
-  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 48px;

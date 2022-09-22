@@ -1,4 +1,5 @@
 import { UserNutrimentsDetails } from "./UserNutrimentsDetails";
+import PropTypes from "prop-types";
 
 export const UserAnalytics = ({ nutrimentsInfos }) => {
   return (
@@ -11,4 +12,8 @@ export const UserAnalytics = ({ nutrimentsInfos }) => {
       />
     </div>
   );
+};
+
+UserAnalytics.propsType = {
+  nutrimentsInfos: PropTypes.object.isRequired,
 };

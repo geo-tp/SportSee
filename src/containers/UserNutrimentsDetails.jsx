@@ -1,4 +1,5 @@
 import { NutrimentCount } from "../components/NutrimentCount";
+import PropTypes from "prop-types";
 import Carbs from "../assets/carbs.svg";
 import Protein from "../assets/protein.svg";
 import Fat from "../assets/fat.svg";
@@ -45,4 +46,11 @@ export const UserNutrimentsDetails = ({
       />
     </div>
   );
+};
+
+UserNutrimentsDetails.propsType = {
+  calorieCount: PropTypes.string.isRequired,
+  proteinCount: PropTypes.string.isRequired,
+  carbohydrateCount: PropTypes.string.isRequired,
+  lipidCount: PropTypes.string.isRequired,
 };

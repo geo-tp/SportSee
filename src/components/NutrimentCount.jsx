@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export const NutrimentCount = ({ name, icon, alt, value, unit }) => {
   return (
     <div className="nutriment-count">
@@ -13,4 +15,12 @@ export const NutrimentCount = ({ name, icon, alt, value, unit }) => {
       </div>
     </div>
   );
+};
+
+NutrimentCount.propsType = {
+  name: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  unit: PropTypes.string.isRequired,
 };

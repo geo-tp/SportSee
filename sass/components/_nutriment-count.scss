@@ -1,0 +1,25 @@
+.nutriment-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color7;
+  width: 250px;
+  height: 125px;
+  margin-bottom: 20px;
+
+  & p {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 20px;
+  }
+
+  &__value {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    color: $color8;
+    font-size: 0.9em;
+  }
+}

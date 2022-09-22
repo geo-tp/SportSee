@@ -10,10 +10,11 @@
 @import "./components/nav-bar-button";
 @import "./components/copyright";
 @import "./components/user-header";
+@import "./components/nutriment-count";
 
 // CONTAINERS
 @import "./containers/horizontal-nav-bar";
 @import "./containers/vertical-nav-bar";
 
 // PAGES
-@import "./containers/page-content";
+@import "./pages/page-content";

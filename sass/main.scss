@@ -9,12 +9,14 @@
 @import "./components/nav-bar-link";
 @import "./components/nav-bar-button";
 @import "./components/copyright";
-@import "./components/user-header";
 @import "./components/nutriment-count";
 
 // CONTAINERS
+@import "./containers/user-header";
 @import "./containers/horizontal-nav-bar";
 @import "./containers/vertical-nav-bar";
+@import "./containers/user-charts";
+@import "./containers/user-analytics";
 
 // PAGES
 @import "./pages/page-content";

@@ -68,6 +68,57 @@ body {
   padding: 2% 5%;
 }
 
+.intensity-chart {
+  background-color: #282d30;
+  width: 30%;
+  border-radius: 5px;
+  height: 250px;
+}
+
+.score-chart {
+  width: 30%;
+  height: 250px;
+  position: relative;
+}
+.score-chart__header {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+.score-chart__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+.score-chart__label span:first-child {
+  font-size: 1.6em;
+}
+.score-chart__label span:last-child {
+  font-size: 1.2em;
+  color: #74798c;
+}
+
+.session-chart {
+  background-color: #e60000;
+  width: 30%;
+  border-radius: 5px;
+  position: relative;
+  height: 250px;
+}
+.session-chart__header {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  color: #fbfbfb;
+  width: 70%;
+}
+
 .barchart-tooltip {
   background-color: #e60000;
   color: #ffffff;
@@ -103,6 +154,10 @@ body {
 .chart-legend__element__point--red {
   background-color: #e60000;
 }
+.sessionchart-tooltip {
+  background-color: #fbfbfb;
+}
+
 .user-header h1 {
   font-style: normal;
   font-weight: 500;

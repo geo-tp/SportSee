@@ -1,2 +1,15 @@
 .session-chart {
+  background-color: $color2;
+  width: 30%;
+  //   padding: 3px;
+  border-radius: 5px;
+  position: relative;
+  height: 250px;
+  &__header {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    color: $color7;
+    width: 70%;
+  }
 }

@@ -48,26 +48,32 @@ const data = [
 
 export const IntensityChart = () => {
   return (
-    <ResponsiveContainer width={"30%"} height={300} className="intensity-chart">
-      <RadarChart
-        width={500}
-        height={300}
-        cx="50%"
-        cy="50%"
-        outerRadius="80%"
-        data={data}
+    <div className="intensity-chart">
+      <ResponsiveContainer
+        width={"100%"}
+        height={"100%"}
+        className="intensity-chart"
       >
-        <PolarGrid />
-        <PolarAngleAxis dataKey="subject" />
-        <PolarRadiusAxis />
-        <Radar
-          name="Mike"
-          dataKey="A"
-          stroke="#8884d8"
-          fill="#8884d8"
-          fillOpacity={0.6}
-        />
-      </RadarChart>
-    </ResponsiveContainer>
+        <RadarChart data={data}>
+          <PolarGrid radialLines={false} />
+          <PolarAngleAxis
+            dataKey="subject"
+            stroke="white"
+            dy={4}
+            tickLine={false}
+            tick={{
+              fontSize: 12,
+              fontWeight: 500,
+            }}
+          />
+          <Radar
+            dataKey="A"
+            fill={`#ff0101`}
+            fillOpacity={0.7}
+            stroke="transparent"
+          />
+        </RadarChart>
+      </ResponsiveContainer>
+    </div>
   );
 };

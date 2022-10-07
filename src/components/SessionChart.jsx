@@ -11,75 +11,89 @@ import {
 
 const data = [
   {
-    name: "1",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
+    day: "L",
+    length: 40,
   },
   {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
+    day: "M",
+    length: 30,
   },
   {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
+    day: "M",
+    length: 20,
   },
   {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
+    day: "J",
+    length: 27,
   },
   {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
+    day: "V",
+    length: 18,
   },
   {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
+    day: "S",
+    length: 23,
   },
   {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
+    day: "D",
+    length: 34,
   },
 ];
 export const SessionChart = () => {
   return (
-    <ResponsiveContainer width={"30%"} height={300} className="session-chart">
-      <LineChart
-        width={500}
-        height={300}
-        data={data}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line
-          type="monotone"
-          dataKey="pv"
-          stroke="#8884d8"
-          activeDot={{ r: 8 }}
-        />
-        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-      </LineChart>
-    </ResponsiveContainer>
+    <div className="session-chart">
+      <p className="session-chart__header">Durée moyenne des sessions</p>
+      <ResponsiveContainer width={"100%"} height={250}>
+        <LineChart
+          width={"30%"}
+          height={250}
+          data={data}
+          outerRadius="75%"
+          margin={{ top: 0, right: 12, bottom: 24, left: 12 }}
+        >
+          <XAxis
+            dataKey="day"
+            stroke="rgba(255, 255, 255, 0.6)"
+            axisLine={false}
+            dy={10}
+            tickLine={false}
+            tick={{
+              fontSize: 12,
+              fontWeight: 500,
+            }}
+          />
+          <YAxis dataKey="length" domain={[0, "dataMax + 60"]} hide={true} />
+          <Line
+            dataKey="length"
+            stroke="rgba(255, 255, 255, 0.6)"
+            type="monotone"
+            strokeWidth={2}
+            dot={false}
+            activeDot={{
+              stroke: "rgba(255,255,255, 0.6)",
+              strokeWidth: 10,
+              r: 5,
+            }}
+          />
+          <Tooltip
+            content={TooltipContent}
+            cursor={{
+              stroke: "rgba(0, 0, 0, 0.1)",
+              strokeWidth: 32,
+            }}
+          />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
   );
+};
+
+const TooltipContent = (props) => {
+  if (props.payload.length) {
+    return (
+      <div className="sessionchart-tooltip">
+        <div>{props.payload[0].value} min</div>
+      </div>
+    );
+  }
 };

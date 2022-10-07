@@ -55,6 +55,54 @@ body {
   font-size: 0.9em;
 }
 
+.activity-chart {
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  margin-right: 2%;
+}
+.activity-chart__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 2% 5%;
+}
+
+.barchart-tooltip {
+  background-color: #e60000;
+  color: #ffffff;
+  padding: 5px;
+  font-size: 0.8em;
+  border: unset;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chart-legend div:first-child {
+  margin-right: 10px;
+}
+.chart-legend__element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #74798c;
+}
+.chart-legend__element__point {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+.chart-legend__element__point--gray {
+  background-color: #282d30;
+}
+.chart-legend__element__point--red {
+  background-color: #e60000;
+}
 .user-header h1 {
   font-style: normal;
   font-weight: 500;
@@ -70,7 +118,7 @@ body {
   align-items: center;
   background-color: #020203;
   height: 90px;
-  padding-left: 2%;
+  padding-left: 1.5%;
   padding-right: 5%;
 }
 
@@ -85,8 +133,21 @@ body {
   justify-content: center;
 }
 
+.user-charts {
+  flex-basis: 80%;
+}
+.user-charts__alt {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user-analytics {
+  display: flex;
+  justify-content: space-between;
+}
+
 .page-content {
-  max-width: 1000px;
+  max-width: 1024px;
   margin: 3% auto;
   padding-left: 20px;
   padding-right: 20px;

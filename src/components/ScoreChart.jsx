@@ -1,4 +1,9 @@
-import { RadialBarChart, RadialBar, Legend } from "recharts";
+import {
+  RadialBarChart,
+  RadialBar,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
 const data = [
   {
@@ -54,12 +59,10 @@ const style = {
 
 export const ScoreChart = () => {
   return (
-    <div className="score-chart">
+    <ResponsiveContainer width={"30%"} height={300} className="score-chart">
       <RadialBarChart
         cx="50%"
         cy="50%"
-        width={500}
-        height={300}
         innerRadius="10%"
         outerRadius="80%"
         barSize={10}
@@ -79,6 +82,6 @@ export const ScoreChart = () => {
           wrapperStyle={style}
         />
       </RadialBarChart>
-    </div>
+    </ResponsiveContainer>
   );
 };

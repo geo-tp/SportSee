@@ -6,11 +6,12 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 
 const data = [
   {
-    name: "Page A",
+    name: "1",
     uv: 4000,
     pv: 2400,
     amt: 2400,
@@ -54,7 +55,7 @@ const data = [
 ];
 export const SessionChart = () => {
   return (
-    <div className="session-chart">
+    <ResponsiveContainer width={"30%"} height={300} className="session-chart">
       <LineChart
         width={500}
         height={300}
@@ -79,6 +80,6 @@ export const SessionChart = () => {
         />
         <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
       </LineChart>
-    </div>
+    </ResponsiveContainer>
   );
 };

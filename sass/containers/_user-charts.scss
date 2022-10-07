@@ -1,0 +1,10 @@
+.user-charts {
+  flex-basis: 80%;
+  &__main {
+  }
+
+  &__alt {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

@@ -4,6 +4,7 @@ import {
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
+  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -47,7 +48,7 @@ const data = [
 
 export const IntensityChart = () => {
   return (
-    <div className="intensity-chart">
+    <ResponsiveContainer width={"30%"} height={300} className="intensity-chart">
       <RadarChart
         width={500}
         height={300}
@@ -67,6 +68,6 @@ export const IntensityChart = () => {
           fillOpacity={0.6}
         />
       </RadarChart>
-    </div>
+    </ResponsiveContainer>
   );
 };

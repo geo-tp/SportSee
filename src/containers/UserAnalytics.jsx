@@ -2,10 +2,10 @@ import { UserNutrimentsDetails } from "./UserNutrimentsDetails";
 import PropTypes from "prop-types";
 import { UserCharts } from "./UserCharts";
 
-export const UserAnalytics = ({ nutrimentsInfos }) => {
+export const UserAnalytics = ({ nutrimentsInfos, userId }) => {
   return (
     <div className="user-analytics">
-      <UserCharts />
+      <UserCharts userId={userId} />
       <UserNutrimentsDetails
         calorieCount={nutrimentsInfos.calorieCount}
         proteinCount={nutrimentsInfos.proteinCount}

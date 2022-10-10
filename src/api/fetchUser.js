@@ -6,14 +6,12 @@ export const fetchUser = async (id) => {
   return fetch(url, HEADERS)
     .then((response) => {
       if (response.ok) {
-        console.log("RES IS OK");
         return response.json();
       }
 
       throw response;
     })
     .then((json) => {
-      console.log("IN RETURN DATA");
       return json.data;
     })
     .catch((err) => {

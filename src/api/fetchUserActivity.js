@@ -1,3 +1,4 @@
+import { formatActivityData } from "../utils/dataFormater";
 import { HEADERS } from "./headers";
 import { getUserActivityRoute } from "./routes";
 
@@ -12,7 +13,7 @@ export const fetchUserActivity = async (id) => {
       throw response;
     })
     .then((json) => {
-      return json.data;
+      return formatActivityData(json.data);
     })
     .catch((err) => {
       return err;

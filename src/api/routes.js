@@ -8,7 +8,7 @@ export const getUserActivityRoute = (id) => {
   return `${BASE_URL}user/${id}/activity`;
 };
 
-export const getUserAverageRoute = (id) => {
+export const getUserAverageSessionsRoute = (id) => {
   return `${BASE_URL}user/${id}/average-sessions`;
 };
 

@@ -2,15 +2,24 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { HorizontalNavBar } from "./containers/HorizontalNavBar";
 import { VerticalNavBar } from "./containers/VerticalNavBar";
-import { PageContent } from "./pages/PageContent";
+import { Dashboard } from "./pages/Dashboard";
 import reportWebVitals from "./reportWebVitals";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const queryClient = new QueryClient();
 root.render(
   <React.StrictMode>
-    <HorizontalNavBar />
-    <VerticalNavBar />
-    <PageContent />
+    <BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <HorizontalNavBar />
+        <VerticalNavBar />
+        <Routes>
+          <Route path="/dashboard/:userId" element={<Dashboard />} />
+        </Routes>
+      </QueryClientProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

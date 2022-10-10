@@ -2,34 +2,24 @@ import { ActivityChart } from "../components/ActivityChart";
 import { IntensityChart } from "../components/IntensityChart";
 import { ScoreChart } from "../components/ScoreChart";
 import { SessionChart } from "../components/SessionChart";
-import { fetchUserAverage } from "../api/fetchUserAverage";
-import { fetchUserPerformance } from "../api/fetchUserPerformance";
-import { fetchUserActivity } from "../api/fetchUserActivity";
-import { useState } from "react";
-import { useEffect } from "react";
+import PropTypes from "prop-types";
 
-export const UserCharts = ({ userId }) => {
-  const [performance, setPerformance] = useState(null);
-  const [average, setAverage] = useState(null);
-  const [activity, setActivity] = useState(null);
-  useEffect(() => {
-    const fetchInfos = async () => {
-      setPerformance(await fetchUserPerformance(userId));
-      setAverage(await fetchUserAverage(userId));
-      setActivity(await fetchUserActivity(userId));
-    };
-    fetchInfos();
-  });
+export const UserCharts = ({ userId, todayScore }) => {
   return (
     <div className="user-charts">
       <div className="user-charts__main">
-        {activity && <ActivityChart data={activity} />}
+        <ActivityChart userId={userId} />
       </div>
       <div className="user-charts__alt">
-        <SessionChart />
-        <IntensityChart />
-        <ScoreChart />
+        <SessionChart userId={userId} />
+        <IntensityChart userId={userId} />
+        <ScoreChart todayScore={todayScore} />
       </div>
     </div>
   );
+};
+
+UserCharts.propsType = {
+  userId: PropTypes.number.isRequired,
+  todayScore: PropTypes.number.isRequired,
 };

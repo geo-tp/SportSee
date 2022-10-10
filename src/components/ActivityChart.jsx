@@ -1,18 +1,26 @@
+import { useQuery } from "react-query";
 import {
   BarChart,
   Bar,
-  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
-import { formatActivityData } from "../utils/dataFormater";
+import { fetchUserActivity } from "../api/fetchUserActivity";
+import PropTypes from "prop-types";
 
-export const ActivityChart = ({ data }) => {
-  const activities = formatActivityData(data);
+export const ActivityChart = ({ userId }) => {
+  const { data, error, isLoading } = useQuery(["activities"], () =>
+    fetchUserActivity(userId)
+  );
+
+  if (error) {
+    return "Error during data fetch";
+  } else if (isLoading) {
+    return "Loading";
+  }
 
   return (
     <div className="activity-chart">
@@ -31,7 +39,7 @@ export const ActivityChart = ({ data }) => {
       </div>
       <ResponsiveContainer width={"100%"} height={300} min-width={300}>
         <BarChart
-          data={activities}
+          data={data}
           margin={{ top: 80, right: 48, bottom: 32, left: 48 }}
           barGap={8}
           barCategoryGap="35%"
@@ -89,7 +97,6 @@ export const ActivityChart = ({ data }) => {
 
 const TooltipContent = (props) => {
   if (props.payload.length) {
-    console.log(props.payload.length);
     return (
       <div className="barchart-tooltip">
         <div>{props.payload[0].value} kg</div>
@@ -97,4 +104,8 @@ const TooltipContent = (props) => {
       </div>
     );
   }
+};
+
+ActivityChart.propsType = {
+  userId: PropTypes.number.isRequired,
 };

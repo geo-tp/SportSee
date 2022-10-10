@@ -5,7 +5,7 @@ const pieData = [
   { name: "not-completed", value: 1 - 0.52, fillColor: "transparent" },
 ];
 
-export const ScoreChart = () => {
+export const ScoreChart = ({ todayScore }) => {
   return (
     <div className="score-chart">
       <p className="score-chart__header">Score</p>
@@ -21,7 +21,7 @@ export const ScoreChart = () => {
           >
             {pieData.map((entry, index) => (
               <Cell
-                key={`cell-${index}`}
+                key={`cell-id-${index}`}
                 fill={entry.fillColor}
                 cornerRadius="50%"
               />
@@ -30,7 +30,7 @@ export const ScoreChart = () => {
         </PieChart>
       </ResponsiveContainer>
       <div className="score-chart__label">
-        <span>12%</span>
+        <span>{todayScore * 100}%</span>
         <span>de votre objectif</span>
       </div>
     </div>

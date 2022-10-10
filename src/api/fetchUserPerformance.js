@@ -1,3 +1,4 @@
+import { formatIntensityData } from "../utils/dataFormater";
 import { HEADERS } from "./headers";
 import { getUserPerformanceRoute } from "./routes";
 
@@ -11,7 +12,7 @@ export const fetchUserPerformance = async (id) => {
       throw response;
     })
     .then((json) => {
-      return json.data;
+      return formatIntensityData(json.data);
     })
     .catch((err) => {
       return err;

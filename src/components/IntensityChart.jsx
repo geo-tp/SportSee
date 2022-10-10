@@ -3,50 +3,22 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  PolarRadiusAxis,
   ResponsiveContainer,
 } from "recharts";
+import PropTypes from "prop-types";
+import { useQuery } from "react-query";
+import { fetchUserPerformance } from "../api/fetchUserPerformance";
 
-const data = [
-  {
-    subject: "Math",
-    A: 120,
-    B: 110,
-    fullMark: 150,
-  },
-  {
-    subject: "Chinese",
-    A: 98,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: "English",
-    A: 86,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: "Geography",
-    A: 99,
-    B: 100,
-    fullMark: 150,
-  },
-  {
-    subject: "Physics",
-    A: 85,
-    B: 90,
-    fullMark: 150,
-  },
-  {
-    subject: "History",
-    A: 65,
-    B: 85,
-    fullMark: 150,
-  },
-];
+export const IntensityChart = ({ userId }) => {
+  const { data, error, isLoading } = useQuery(["user"], () =>
+    fetchUserPerformance(userId)
+  );
 
-export const IntensityChart = () => {
+  if (error) {
+    return "Error during data fetch";
+  } else if (isLoading) {
+    return "Loading";
+  }
   return (
     <div className="intensity-chart">
       <ResponsiveContainer
@@ -67,7 +39,7 @@ export const IntensityChart = () => {
             }}
           />
           <Radar
-            dataKey="A"
+            dataKey="value"
             fill={`#ff0101`}
             fillOpacity={0.7}
             stroke="transparent"
@@ -76,4 +48,8 @@ export const IntensityChart = () => {
       </ResponsiveContainer>
     </div>
   );
+};
+
+IntensityChart.propsType = {
+  userId: PropTypes.number.isRequired,
 };

@@ -70,7 +70,7 @@ body {
 
 .intensity-chart {
   background-color: #282d30;
-  width: 30%;
+  width: 35%;
   border-radius: 5px;
   height: 250px;
 }
@@ -131,6 +131,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0.8em;
 }
 .chart-legend div:first-child {
   margin-right: 10px;
@@ -193,7 +194,7 @@ body {
 }
 .user-charts__alt {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .user-analytics {

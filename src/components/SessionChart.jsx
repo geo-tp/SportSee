@@ -1,45 +1,26 @@
+import { useQuery } from "react-query";
+import PropTypes from "prop-types";
 import {
   LineChart,
   Line,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
+import { fetchUserAverageSessions } from "../api/fetchUserAverageSessions";
 
-const data = [
-  {
-    day: "L",
-    length: 40,
-  },
-  {
-    day: "M",
-    length: 30,
-  },
-  {
-    day: "M",
-    length: 20,
-  },
-  {
-    day: "J",
-    length: 27,
-  },
-  {
-    day: "V",
-    length: 18,
-  },
-  {
-    day: "S",
-    length: 23,
-  },
-  {
-    day: "D",
-    length: 34,
-  },
-];
-export const SessionChart = () => {
+export const SessionChart = ({ userId }) => {
+  const { data, error, isLoading } = useQuery(["sessions"], () =>
+    fetchUserAverageSessions(userId)
+  );
+
+  if (isLoading) {
+    return "Loading";
+  } else if (error) {
+    return "Error during fetching";
+  }
+
   return (
     <div className="session-chart">
       <p className="session-chart__header">Durée moyenne des sessions</p>
@@ -62,9 +43,13 @@ export const SessionChart = () => {
               fontWeight: 500,
             }}
           />
-          <YAxis dataKey="length" domain={[0, "dataMax + 60"]} hide={true} />
+          <YAxis
+            dataKey="sessionLength"
+            domain={[0, "dataMax + 60"]}
+            hide={true}
+          />
           <Line
-            dataKey="length"
+            dataKey="sessionLength"
             stroke="rgba(255, 255, 255, 0.6)"
             type="monotone"
             strokeWidth={2}
@@ -96,4 +81,8 @@ const TooltipContent = (props) => {
       </div>
     );
   }
+};
+
+SessionChart.propsType = {
+  userId: PropTypes.number.isRequired,
 };

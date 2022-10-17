@@ -1,4 +1,4 @@
-import { formatActivityData } from "../utils/dataFormater";
+import { formatActivityData } from "../format/formatActivityData";
 import { HEADERS } from "./headers";
 import { getUserActivityRoute } from "./routes";
 

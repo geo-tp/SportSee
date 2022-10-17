@@ -1,4 +1,4 @@
-import { formatAverageSessionsData } from "../utils/dataFormater";
+import { formatAverageSessionsData } from "../format/formatAverageSessionsData";
 import { HEADERS } from "./headers";
 import { getUserAverageSessionsRoute } from "./routes";
 

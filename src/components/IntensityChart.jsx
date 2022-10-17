@@ -26,7 +26,7 @@ export const IntensityChart = ({ userId }) => {
         height={"100%"}
         className="intensity-chart"
       >
-        <RadarChart data={data}>
+        <RadarChart data={data} outerRadius="65%">
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
             dataKey="subject"

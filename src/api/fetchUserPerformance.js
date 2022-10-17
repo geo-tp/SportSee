@@ -1,4 +1,4 @@
-import { formatIntensityData } from "../utils/dataFormater";
+import { formatIntensityData } from "../format/formatIntensityData";
 import { HEADERS } from "./headers";
 import { getUserPerformanceRoute } from "./routes";
 

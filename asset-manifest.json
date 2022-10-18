@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/Sportsee/static/js/main.b839fa4b.js",
+    "static/js/787.a8762e9d.chunk.js": "/Sportsee/static/js/787.a8762e9d.chunk.js",
+    "static/media/logo.svg": "/Sportsee/static/media/logo.837414860efdf652f26ae7be654e06c5.svg",
+    "static/media/swim.svg": "/Sportsee/static/media/swim.e26dba434236828a108a786d8215cd31.svg",
+    "static/media/cardio.svg": "/Sportsee/static/media/cardio.d516c0e89dbb3aaab23afac6a130ca06.svg",
+    "static/media/carbs.svg": "/Sportsee/static/media/carbs.aa0e74661df8c71ea59cbe777ac24615.svg",
+    "static/media/fat.svg": "/Sportsee/static/media/fat.82c6cb9fd2b3e6307fca82c2f796ed14.svg",
+    "static/media/protein.svg": "/Sportsee/static/media/protein.c285979616f56dc9dfa457e51c583d68.svg",
+    "static/media/relax.svg": "/Sportsee/static/media/relax.6c31a2775a609d06fd5d99eb347250ed.svg",
+    "index.html": "/Sportsee/index.html",
+    "static/media/calories.svg": "/Sportsee/static/media/calories.5db5a3aff9bd8f441f49792782c8262e.svg",
+    "static/media/gym.svg": "/Sportsee/static/media/gym.4fe7fb9fe3554121b3d42dcb489eefd0.svg",
+    "main.b839fa4b.js.map": "/Sportsee/static/js/main.b839fa4b.js.map",
+    "787.a8762e9d.chunk.js.map": "/Sportsee/static/js/787.a8762e9d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b839fa4b.js"
+  ]
+}

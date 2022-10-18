@@ -1,0 +1,234 @@
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-bar-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.nav-bar-button {
+  padding: 0px;
+  background-color: unset;
+  border: unset;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 10%;
+  width: 160px;
+  left: -25px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  /* identical to box height, or 200% */
+  color: #ffffff;
+  transform: rotate(-90deg);
+}
+
+.nutriment-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbfbfb;
+  width: 250px;
+  height: 125px;
+  margin-left: 20px;
+  box-shadow: 0px 0px 15px 3px rgba(123, 123, 123, 0.115);
+}
+.nutriment-count p {
+  margin: 0px;
+  padding: 0px;
+  margin-left: 20px;
+}
+.nutriment-count__value {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.nutriment-count__name {
+  color: #74798c;
+  font-size: 0.9em;
+}
+
+.activity-chart {
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  margin-bottom: 2%;
+  box-shadow: 0px 0px 15px 3px rgba(123, 123, 123, 0.115);
+}
+.activity-chart__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 2% 5%;
+}
+
+.intensity-chart {
+  background-color: #282d30;
+  width: 32%;
+  border-radius: 5px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-chart {
+  width: 32%;
+  height: 250px;
+  position: relative;
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 3px rgba(123, 123, 123, 0.115);
+}
+.score-chart__header {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  z-index: 50;
+  font-size: 0.9em;
+}
+.score-chart__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+.score-chart__label span:first-child {
+  font-size: 1.6em;
+}
+.score-chart__label span:last-child {
+  font-size: 1.2em;
+  color: #74798c;
+}
+
+.session-chart {
+  background-color: #e60000;
+  width: 32%;
+  border-radius: 5px;
+  position: relative;
+  height: 250px;
+}
+.session-chart__header {
+  position: absolute;
+  left: 12%;
+  top: 5%;
+  color: #fbfbfb;
+  width: 70%;
+  opacity: 0.5;
+  font-size: 0.9em;
+}
+
+.barchart-tooltip {
+  background-color: #e60000;
+  color: #ffffff;
+  padding: 5px;
+  font-size: 0.8em;
+  border: unset;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+}
+.chart-legend div:first-child {
+  margin-right: 10px;
+}
+.chart-legend__element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #74798c;
+}
+.chart-legend__element__point {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+.chart-legend__element__point--gray {
+  background-color: #282d30;
+}
+.chart-legend__element__point--red {
+  background-color: #e60000;
+}
+.sessionchart-tooltip {
+  background-color: #fbfbfb;
+}
+
+.user-header h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 24px;
+}
+.user-header span {
+  color: #ff0101;
+}
+.horizontal-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #020203;
+  height: 90px;
+  padding-left: 1.5%;
+  padding-right: 5%;
+  box-shadow: 0px 0px 15px 3px rgba(55, 55, 55, 0.579);
+}
+
+.vertical-nav-bar {
+  width: 117px;
+  height: calc(100vh - 90px);
+  position: relative;
+  float: left;
+  background-color: #020203;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-charts {
+  flex-basis: 80%;
+}
+.user-charts__alt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-analytics {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-calories-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page-content {
+  max-width: 1024px;
+  margin: 1% auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */

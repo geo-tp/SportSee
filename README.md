@@ -1,3 +1,33 @@
+# SportSee
+
+Tableau de bord d'analytics permettant de connaitre le nombre de calories brûlées.
+
+![](presentation.png)
+
+## Dépendances
+
+- react
+- react-router-dom
+- recharts
+
+## Installation
+
+#### `npm install`
+
+Installe les fichiers necessaires au fonctionnement de l'application
+
+#### `npm start`
+
+Lance l'application en mode developpement
+
+## See SportSee Live
+
+[Link to Sportsee website](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=1%3A2)
+
+## See Figma Models
+
+[Link to figma models](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=1%3A2)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

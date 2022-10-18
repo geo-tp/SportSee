@@ -1,3 +1,4 @@
+import { defaultUser } from "../mock/defaultUser";
 import { HEADERS } from "./headers";
 import { getUserRoute } from "./routes";
 
@@ -7,6 +8,8 @@ export const fetchUser = async (id) => {
     .then((response) => {
       if (response.ok) {
         return response.json();
+      } else if (response.status === 404) {
+        return defaultUser;
       }
 
       throw response;

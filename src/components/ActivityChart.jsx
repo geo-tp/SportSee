@@ -10,14 +10,15 @@ import {
 } from "recharts";
 import { fetchUserActivity } from "../api/fetchUserActivity";
 import PropTypes from "prop-types";
+import { defaultActivities } from "../mock/defaultActivities";
 
 export const ActivityChart = ({ userId }) => {
-  const { data, error, isLoading } = useQuery(["activities"], () =>
+  let { data, isSuccess, isLoading } = useQuery(["activities"], () =>
     fetchUserActivity(userId)
   );
 
-  if (error) {
-    return "Error during data fetch";
+  if (!isSuccess) {
+    data = defaultActivities;
   } else if (isLoading) {
     return "Loading";
   }

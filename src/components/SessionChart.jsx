@@ -9,16 +9,17 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { fetchUserAverageSessions } from "../api/fetchUserAverageSessions";
+import { defaultAverageSessions } from "../mock/defaultAverageSessions";
 
 export const SessionChart = ({ userId }) => {
-  const { data, error, isLoading } = useQuery(["sessions"], () =>
+  let { data, isSuccess, isLoading } = useQuery(["sessions"], () =>
     fetchUserAverageSessions(userId)
   );
 
-  if (isLoading) {
+  if (!isSuccess) {
+    data = defaultAverageSessions;
+  } else if (isLoading) {
     return "Loading";
-  } else if (error) {
-    return "Error during fetching";
   }
 
   return (

@@ -1,4 +1,5 @@
 import { formatAverageSessionsData } from "../format/formatAverageSessionsData";
+import { defaultAverageSessions } from "../mock/defaultAverageSessions";
 import { HEADERS } from "./headers";
 import { getUserAverageSessionsRoute } from "./routes";
 
@@ -8,6 +9,8 @@ export const fetchUserAverageSessions = async (id) => {
     .then((response) => {
       if (response.ok) {
         return response.json();
+      } else if (response.status === 404) {
+        return defaultAverageSessions;
       }
 
       throw response;

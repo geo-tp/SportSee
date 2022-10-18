@@ -22,7 +22,7 @@ Lance l'application en mode developpement
 
 ## See SportSee Live
 
-[Link to Sportsee website](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=1%3A2)
+[Link to Sportsee website](https://geo-tp.github.io/Sportsee)
 
 ## See Figma Models
 

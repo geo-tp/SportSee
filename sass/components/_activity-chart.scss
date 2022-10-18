@@ -1,7 +1,9 @@
 .activity-chart {
   background-color: $color7;
   border-radius: 5px;
-  margin-right: 2%;
+  margin-bottom: 2%;
+  @include box-shadow;
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -9,30 +11,4 @@
     font-weight: bold;
     padding: 2% 5%;
   }
-  // &__axis-x {
-  //   color: green;
-  //   background-color: green;
-  // }
-
-  // &__axis-y {
-  //   color: red;
-  //   background-color: red;
-  // }
-
-  // &__tooltip {
-  //   color: pink;
-  //   background-color: pink;
-  // }
-
-  // &__legend {
-  //   color: yellow;
-  //   background-color: yellow;
-  // }
-
-  // &__bar {
-  //   color: $color2;
-  //   background-color: $color2;
-  //   &:first-child {
-  //   }
-  // }
 }

@@ -7,11 +7,11 @@ import { useParams } from "react-router-dom";
 export const Dashboard = () => {
   const { userId } = useParams();
 
-  const { data, error, isLoading } = useQuery(["perfomances"], () =>
+  const { data, error, isLoading } = useQuery(["user"], () =>
     fetchUser(userId)
   );
 
-  if (error) {
+  if (error || !data) {
     return "Error during data fetch";
   } else if (isLoading) {
     return "Loading";
@@ -27,7 +27,7 @@ export const Dashboard = () => {
       <UserAnalytics
         nutrimentsInfos={data.keyData}
         userId={userId}
-        todayScore={data.todayScore}
+        todayScore={data.todayScore ? data.todayScore : data.score}
       />
     </div>
   );

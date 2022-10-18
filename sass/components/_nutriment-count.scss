@@ -5,7 +5,8 @@
   background-color: $color7;
   width: 250px;
   height: 125px;
-  margin-bottom: 20px;
+  margin-left: 20px;
+  @include box-shadow;
 
   & p {
     margin: 0px;

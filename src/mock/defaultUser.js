@@ -2,7 +2,7 @@ export const defaultUser = {
   data: {
     id: 12,
     userInfos: { firstName: "Karl", lastName: "Dovineau", age: 31 },
-    todayScore: 0.12,
+    todayScore: 0.42,
     keyData: {
       calorieCount: 1930,
       proteinCount: 155,

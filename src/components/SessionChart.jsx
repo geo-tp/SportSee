@@ -25,22 +25,22 @@ export const SessionChart = ({ userId }) => {
   return (
     <div className="session-chart">
       <p className="session-chart__header">Durée moyenne des sessions</p>
-      <ResponsiveContainer width={"100%"} height={250}>
+      <ResponsiveContainer>
         <LineChart
           width={"30%"}
           height={250}
           data={data}
           outerRadius="75%"
-          margin={{ top: 0, right: 12, bottom: 24, left: 12 }}
+          margin={{ top: 0, right: 12, bottom: 15, left: 12 }}
         >
           <XAxis
             dataKey="day"
-            stroke="rgba(255, 255, 255, 0.6)"
+            stroke="rgba(255, 255, 255, 0.5)"
             axisLine={false}
             dy={10}
             tickLine={false}
             tick={{
-              fontSize: 12,
+              fontSize: 11,
               fontWeight: 500,
             }}
           />
@@ -51,20 +51,15 @@ export const SessionChart = ({ userId }) => {
           />
           <Line
             dataKey="sessionLength"
-            stroke="rgba(255, 255, 255, 0.6)"
+            stroke="rgba(255, 255, 255, 0.5)"
             type="monotone"
             strokeWidth={2}
             dot={false}
-            activeDot={{
-              stroke: "rgba(255,255,255, 0.6)",
-              strokeWidth: 10,
-              r: 5,
-            }}
           />
           <Tooltip
             content={TooltipContent}
             cursor={{
-              stroke: "rgba(0, 0, 0, 0.1)",
+              stroke: "rgba(0, 0, 0, 0.044)",
               strokeWidth: 32,
             }}
           />

@@ -10,15 +10,14 @@ import {
 } from "recharts";
 import { fetchUserActivity } from "../api/fetchUserActivity";
 import PropTypes from "prop-types";
-import { defaultActivities } from "../mock/defaultActivities";
 
 export const ActivityChart = ({ userId }) => {
-  let { data, isSuccess, isLoading } = useQuery(["activities"], () =>
+  const { data, error, isLoading } = useQuery(["activities"], () =>
     fetchUserActivity(userId)
   );
 
-  if (!isSuccess) {
-    data = defaultActivities;
+  if (error) {
+    return "Error during data fetch";
   } else if (isLoading) {
     return "Loading";
   }
@@ -38,11 +37,11 @@ export const ActivityChart = ({ userId }) => {
           </div>
         </div>
       </div>
-      <ResponsiveContainer width={"100%"} height={300} min-width={300}>
+      <ResponsiveContainer height={300}>
         <BarChart
           data={data}
-          margin={{ top: 80, right: 48, bottom: 32, left: 48 }}
-          barGap={8}
+          margin={{ top: 80, right: 40, bottom: 30, left: 40 }}
+          barGap={6}
           barCategoryGap="35%"
         >
           <CartesianGrid
@@ -50,14 +49,7 @@ export const ActivityChart = ({ userId }) => {
             vertical={false}
             stroke={"#9B9EAC"}
           />
-          <XAxis
-            dataKey="day"
-            dy={12}
-            stroke={"#9B9EAC"}
-            // padding={{ left: -48, right: -48 }}
-            tickLine={false}
-            tick={{ fontSize: 14, fontWeight: 500 }}
-          />
+          <XAxis dataKey="day" dy={12} stroke={"#9B9EAC"} tickLine={false} />
           <YAxis
             yAxisId="kg"
             dataKey="kg"

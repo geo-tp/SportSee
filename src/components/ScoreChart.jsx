@@ -8,13 +8,13 @@ export const ScoreChart = ({ todayScore }) => {
   return (
     <div className="score-chart">
       <p className="score-chart__header">Score</p>
-      <ResponsiveContainer width="100%" height="100%" className="score-chart">
+      <ResponsiveContainer className="score-chart">
         <PieChart>
           <Pie
             data={data}
             dataKey="value"
-            innerRadius={70}
-            outerRadius={80}
+            innerRadius={75}
+            outerRadius={85}
             startAngle={90}
             endAngle={450}
           >

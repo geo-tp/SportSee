@@ -16,6 +16,7 @@ root.render(
         <HorizontalNavBar />
         <VerticalNavBar />
         <Routes>
+          <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard/:userId" element={<Dashboard />} />
         </Routes>
       </QueryClientProvider>

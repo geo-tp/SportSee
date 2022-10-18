@@ -10,7 +10,7 @@ import { useQuery } from "react-query";
 import { fetchUserPerformance } from "../api/fetchUserPerformance";
 
 export const IntensityChart = ({ userId }) => {
-  const { data, error, isLoading } = useQuery(["user"], () =>
+  const { data, error, isLoading } = useQuery(["intensity"], () =>
     fetchUserPerformance(userId)
   );
 
@@ -21,11 +21,7 @@ export const IntensityChart = ({ userId }) => {
   }
   return (
     <div className="intensity-chart">
-      <ResponsiveContainer
-        width={"100%"}
-        height={"100%"}
-        className="intensity-chart"
-      >
+      <ResponsiveContainer className="intensity-chart">
         <RadarChart data={data} outerRadius="65%">
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
@@ -34,14 +30,14 @@ export const IntensityChart = ({ userId }) => {
             dy={4}
             tickLine={false}
             tick={{
-              fontSize: 12,
+              fontSize: 11,
               fontWeight: 500,
             }}
           />
           <Radar
             dataKey="value"
             fill={`#ff0101`}
-            fillOpacity={0.7}
+            fillOpacity={0.8}
             stroke="transparent"
           />
         </RadarChart>

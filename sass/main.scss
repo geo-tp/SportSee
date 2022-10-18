@@ -1,6 +1,9 @@
 // UTILS
 @import "./utils/variables";
 
+// MIXINS
+@import "./utils/mixins";
+
 // BASE
 @import "./base/global";
 
@@ -24,6 +27,7 @@
 @import "./containers/vertical-nav-bar";
 @import "./containers/user-charts";
 @import "./containers/user-analytics";
+@import "./containers/user-calories-details";
 
 // PAGES
 @import "./pages/page-content";

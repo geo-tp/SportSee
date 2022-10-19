@@ -37,7 +37,7 @@ export const ActivityChart = ({ userId }) => {
           </div>
         </div>
       </div>
-      <ResponsiveContainer height={300}>
+      <ResponsiveContainer width="99%" height={300}>
         <BarChart
           data={data}
           margin={{ top: 80, right: 40, bottom: 30, left: 40 }}

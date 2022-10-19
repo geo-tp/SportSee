@@ -22,7 +22,7 @@ Lance l'application en mode developpement
 
 ## See SportSee Live
 
-[Link to Sportsee website](https://geo-tp.github.io/Sportsee)
+[Link to Sportsee website](https://geo-tp.github.io/SportSee)
 
 ## See Figma Models
 

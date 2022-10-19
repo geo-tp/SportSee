@@ -38,7 +38,7 @@ export const UserNutrimentsDetails = ({
       />
 
       <NutrimentCount
-        name="Calories"
+        name="Lipides"
         value={lipidCount}
         unit="g"
         icon={Fat}

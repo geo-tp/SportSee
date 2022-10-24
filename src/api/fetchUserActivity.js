@@ -1,16 +1,19 @@
 import { formatActivityData } from "../format/formatActivityData";
 import { defaultActivities } from "../mock/defaultActivities";
+import { isMocked } from "../utils/config";
 import { HEADERS } from "./headers";
 import { getUserActivityRoute } from "./routes";
 
 export const fetchUserActivity = async (id) => {
+  if (isMocked) {
+    return formatActivityData(defaultActivities.data);
+  }
+
   const url = getUserActivityRoute(id);
   return fetch(url, HEADERS)
     .then((response) => {
       if (response.ok) {
         return response.json();
-      } else if (response.status === 404) {
-        return defaultActivities;
       }
 
       throw response;

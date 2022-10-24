@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/SportSee/static/js/main.2c0a00d5.js",
+    "main.js": "/SportSee/static/js/main.847bd469.js",
     "static/js/787.a8762e9d.chunk.js": "/SportSee/static/js/787.a8762e9d.chunk.js",
     "static/media/logo.svg": "/SportSee/static/media/logo.837414860efdf652f26ae7be654e06c5.svg",
     "static/media/swim.svg": "/SportSee/static/media/swim.e26dba434236828a108a786d8215cd31.svg",
@@ -12,10 +12,10 @@
     "index.html": "/SportSee/index.html",
     "static/media/calories.svg": "/SportSee/static/media/calories.5db5a3aff9bd8f441f49792782c8262e.svg",
     "static/media/gym.svg": "/SportSee/static/media/gym.4fe7fb9fe3554121b3d42dcb489eefd0.svg",
-    "main.2c0a00d5.js.map": "/SportSee/static/js/main.2c0a00d5.js.map",
+    "main.847bd469.js.map": "/SportSee/static/js/main.847bd469.js.map",
     "787.a8762e9d.chunk.js.map": "/SportSee/static/js/787.a8762e9d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.2c0a00d5.js"
+    "static/js/main.847bd469.js"
   ]
 }

@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 import { useQuery } from "react-query";
 import { fetchUserPerformance } from "../api/fetchUserPerformance";
 
-export const IntensityChart = ({ userId }) => {
+export const PerformanceChart = ({ userId }) => {
   const { data, error, isLoading } = useQuery(["intensity"], () =>
     fetchUserPerformance(userId)
   );
@@ -46,6 +46,6 @@ export const IntensityChart = ({ userId }) => {
   );
 };
 
-IntensityChart.propsType = {
+PerformanceChart.propsType = {
   userId: PropTypes.number.isRequired,
 };

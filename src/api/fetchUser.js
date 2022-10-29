@@ -3,7 +3,7 @@ import { isMocked } from "../utils/config";
 import { HEADERS } from "./headers";
 import { getUserRoute } from "./routes";
 
-// Call API to fetch user data
+// API call to fetch user data
 export const fetchUser = async (id) => {
   if (isMocked) {
     return defaultUser.data;

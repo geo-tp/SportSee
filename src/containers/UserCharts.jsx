@@ -1,5 +1,5 @@
 import { ActivityChart } from "../components/ActivityChart";
-import { IntensityChart } from "../components/IntensityChart";
+import { PerformanceChart } from "../components/PerformanceChart";
 import { ScoreChart } from "../components/ScoreChart";
 import { SessionChart } from "../components/SessionChart";
 import PropTypes from "prop-types";
@@ -12,7 +12,7 @@ export const UserCharts = ({ userId, todayScore }) => {
       </div>
       <div className="user-charts__alt">
         <SessionChart userId={userId} />
-        <IntensityChart userId={userId} />
+        <PerformanceChart userId={userId} />
         <ScoreChart todayScore={todayScore} />
       </div>
     </div>

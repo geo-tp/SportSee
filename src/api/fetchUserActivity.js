@@ -4,6 +4,7 @@ import { isMocked } from "../utils/config";
 import { HEADERS } from "./headers";
 import { getUserActivityRoute } from "./routes";
 
+// API call to fetch user recent activities
 export const fetchUserActivity = async (id) => {
   if (isMocked) {
     return formatActivityData(defaultActivities.data);

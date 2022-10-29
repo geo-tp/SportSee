@@ -1,3 +1,4 @@
+// Format intensity data to be usable with recharts
 export const formatIntensityData = (data) => {
   let formattedData = [];
   const kinds = [

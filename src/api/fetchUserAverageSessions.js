@@ -4,6 +4,7 @@ import { isMocked } from "../utils/config";
 import { HEADERS } from "./headers";
 import { getUserAverageSessionsRoute } from "./routes";
 
+// API call to fetch user average sessions
 export const fetchUserAverageSessions = async (id) => {
   if (isMocked) {
     return formatAverageSessionsData(defaultAverageSessions.data.sessions);

@@ -1,3 +1,4 @@
+// Format activities data to be usable with recharts
 export const formatActivityData = (data) => {
   let formattedData = [];
   for (let session of data.sessions) {

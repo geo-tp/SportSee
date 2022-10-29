@@ -10,7 +10,7 @@ export const fetchUser = async (id) => {
 
   const url = getUserRoute(id);
 
-  return fetch(url, HEADERS)
+  return fetch(url, { headers: HEADERS })
     .then((response) => {
       if (response.ok) {
         return response.json();

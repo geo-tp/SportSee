@@ -10,7 +10,7 @@ export const fetchUserAverageSessions = async (id) => {
   }
 
   const url = getUserAverageSessionsRoute(id);
-  return fetch(url, HEADERS)
+  return fetch(url, { headers: HEADERS })
     .then((response) => {
       if (response.ok) {
         return response.json();

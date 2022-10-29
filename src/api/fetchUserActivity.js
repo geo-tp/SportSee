@@ -10,7 +10,7 @@ export const fetchUserActivity = async (id) => {
   }
 
   const url = getUserActivityRoute(id);
-  return fetch(url, HEADERS)
+  return fetch(url, { headers: HEADERS })
     .then((response) => {
       if (response.ok) {
         return response.json();

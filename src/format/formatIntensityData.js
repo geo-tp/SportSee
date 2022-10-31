@@ -1,4 +1,8 @@
-// Format intensity data to be usable with recharts
+/**
+ * Format user intentisy data to recharts needed struct
+ * @param {object} data - api unformatted data
+ * @returns {object} - formatted data
+ */
 export const formatIntensityData = (data) => {
   let formattedData = [];
   const kinds = [

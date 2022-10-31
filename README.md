@@ -12,6 +12,8 @@ Tableau de bord d'analytics permettant de connaitre le nombre de calories brûl�
 
 ## Installation
 
+Crée avec Node v17.9.1
+
 #### `npm install`
 
 Installe les fichiers necessaires au fonctionnement de l'application

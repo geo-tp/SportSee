@@ -1,4 +1,8 @@
-// Format activities data to be usable with recharts
+/**
+ * Format user activities data to recharts needed struct
+ * @param {object} data - api unformatted data
+ * @returns {object} - formatted data
+ */
 export const formatActivityData = (data) => {
   let formattedData = [];
   for (let session of data.sessions) {

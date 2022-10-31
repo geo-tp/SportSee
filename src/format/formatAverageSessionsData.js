@@ -1,4 +1,8 @@
-// Format average sessions data to be usable with recharts
+/**
+ * Format user sessions data to recharts needed struct
+ * @param {object} data - api unformatted data
+ * @returns {object} - formatted data
+ */
 export const formatAverageSessionsData = (data) => {
   let days = ["L", "M", "M", "J", "V", "S", "D"];
   let formattedData = [];

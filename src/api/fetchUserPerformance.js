@@ -4,7 +4,11 @@ import { isMocked } from "../utils/config";
 import { HEADERS } from "./headers";
 import { getUserPerformanceRoute } from "./routes";
 
-// API call to fetch user performance values
+/**
+ * Api call to get user performance data
+ * @param {number} id - user id
+ * @returns {Promise<Data>} - json user data
+ */
 export const fetchUserPerformance = async (id) => {
   if (isMocked) {
     return formatIntensityData(defaultPerformances.data);

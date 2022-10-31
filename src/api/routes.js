@@ -1,21 +1,37 @@
 import { baseURL } from "../utils/config";
 
-// API route url to get user data
+/**
+ * Get User route
+ * @param {number} id - user id
+ * @returns {string} - routes url
+ */
 export const getUserRoute = (id) => {
   return `${baseURL}user/${id}`;
 };
 
-// API route url to get user recents activities
+/**
+ * Get User activities route
+ * @param {number} id - user id
+ * @returns {string} - routes url
+ */
 export const getUserActivityRoute = (id) => {
   return `${baseURL}user/${id}/activity`;
 };
 
-// API route url to get user average sessions
+/**
+ * Get User sessions route
+ * @param {number} id - user id
+ * @returns {string} - routes url
+ */
 export const getUserAverageSessionsRoute = (id) => {
   return `${baseURL}user/${id}/average-sessions`;
 };
 
-// API route url to get user performance values
+/**
+ * Get User performance route
+ * @param {number} id - user id
+ * @returns {string} - routes url
+ */
 export const getUserPerformanceRoute = (id) => {
   return `${baseURL}user/${id}/performance`;
 };
